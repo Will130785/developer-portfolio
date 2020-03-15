@@ -49,18 +49,18 @@
 
         &--one {
             //implement animation to fade in paragraph one upon page load
-            animation: fadeIn 3s;
+            animation: fadeIn 4s;
         }
 
         &--two {
             //implement animation to fade in paragraph two upon page load
-            animation: fadeIn 6s;
+            animation: fadeIn 7s;
 
         }
 
         &--three {
             //implement animation to fade in paragraph three upon page load
-            animation: fadeIn 9s;
+            animation: fadeIn 10s;
         }
     }
 
@@ -71,6 +71,7 @@
     //position icon at the bottom center of the screen
     grid-row: 12 / 13;
     grid-column: 6 / 8;
+    animation: iconFadeIn 3s;
 
     &__pic {
         //Set size and color of icon

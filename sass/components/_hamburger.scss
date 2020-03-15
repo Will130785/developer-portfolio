@@ -4,6 +4,8 @@
     grid-column: 11 / 12;
     grid-row: 2 / 3;
 
+    animation: iconFadeIn 3s;
+
     &__line {
         //Create lines and display on top of each other
         display: block;

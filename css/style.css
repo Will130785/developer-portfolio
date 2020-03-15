@@ -8,6 +8,12 @@
   100% {
     opacity: 1; } }
 
+@keyframes iconFadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +56,8 @@ body {
 
 .nav {
   grid-column: 11 / 12;
-  grid-row: 2 / 3; }
+  grid-row: 2 / 3;
+  animation: iconFadeIn 3s; }
   .nav__line {
     display: block;
     border-bottom: 1px solid black;
@@ -58,7 +65,8 @@ body {
     margin-top: .5rem; }
 
 .social {
-  grid-row: 3 / 11; }
+  grid-row: 3 / 11;
+  animation: iconFadeIn 3s; }
   .social__icon-box {
     margin-bottom: 2rem;
     border-radius: 100%;
@@ -116,15 +124,16 @@ body {
     width: 2rem;
     margin-right: 1rem; }
   .description__para--one {
-    animation: fadeIn 3s; }
+    animation: fadeIn 4s; }
   .description__para--two {
-    animation: fadeIn 6s; }
+    animation: fadeIn 7s; }
   .description__para--three {
-    animation: fadeIn 9s; }
+    animation: fadeIn 10s; }
 
 .portfolio-icon {
   grid-row: 12 / 13;
-  grid-column: 6 / 8; }
+  grid-column: 6 / 8;
+  animation: iconFadeIn 3s; }
   .portfolio-icon__pic {
     height: 4rem;
     width: 4rem;

@@ -2,6 +2,7 @@
 .social {
     //Position social element to left and halfway down the screen
         grid-row: 3 / 11;
+        animation: iconFadeIn 3s;
 
     //Styling for icon box
     &__icon-box {
