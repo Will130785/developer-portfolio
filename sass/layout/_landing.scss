@@ -1,0 +1,82 @@
+//Landing section styling
+.landing {
+    //Set viewheight to 100% of the screen
+    min-height: 100vh;
+    //Use CSS grid to position page content
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    //center items in their grid position
+    justify-items: center;
+    align-items: center;
+}
+
+//Description section styling
+.description {
+    //Set display to flex and position elements
+    display: flex;
+    flex: 0 0 60%;
+    justify-content: space-around;
+    //Set position in grid
+    grid-column: 3 / 11;
+    grid-row: 5 / 9;
+
+
+    //About section styling
+    &__about {
+        width: 100%;
+        margin-right: 1rem;
+
+    }
+
+    //Details section styling
+    &__dets {
+        width: 100%;
+        margin-left: 1rem;
+        //implement animation to fade in description details section upon page load
+        animation: fadeIn 12s;
+
+    }
+
+    &__icon {
+        //Style detail section icons
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__para {
+
+        &--one {
+            //implement animation to fade in paragraph one upon page load
+            animation: fadeIn 3s;
+        }
+
+        &--two {
+            //implement animation to fade in paragraph two upon page load
+            animation: fadeIn 6s;
+
+        }
+
+        &--three {
+            //implement animation to fade in paragraph three upon page load
+            animation: fadeIn 9s;
+        }
+    }
+
+}
+
+//Styling for portfolio icon
+.portfolio-icon {
+    //position icon at the bottom center of the screen
+    grid-row: 12 / 13;
+    grid-column: 6 / 8;
+
+    &__pic {
+        //Set size and color of icon
+        height: 4rem;
+        width: 4rem;
+        fill: rgb(1, 156, 1);
+
+    }
+}

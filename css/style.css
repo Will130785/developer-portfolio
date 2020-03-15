@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Teko:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lato', sans-serif; }
+
+.description {
+  font-size: 1.8rem;
+  font-weight: 300; }
+  .description__para {
+    margin-bottom: 1.5rem; }
+  .description__dets {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr); }
+    .description__dets--name {
+      font-weight: 300;
+      grid-row: 1 / 2;
+      grid-column: 5 / -1; }
+    .description__dets--job {
+      font-size: 2rem;
+      grid-row: 2 / 3;
+      grid-column: 5 / -1; }
+    .description__dets--phone {
+      grid-row: 3 / 4;
+      grid-column: 5 / -1; }
+    .description__dets--email {
+      grid-row: 4 / 5;
+      grid-column: 5 / -1; }
+    .description__dets--cv {
+      grid-row: 5 / 6;
+      grid-column: 5 / -1;
+      text-decoration: none;
+      color: red; }
+
+.nav {
+  grid-column: 11 / 12;
+  grid-row: 2 / 3; }
+  .nav__line {
+    display: block;
+    border-bottom: 1px solid black;
+    width: 2rem;
+    margin-top: .5rem; }
+
+.social {
+  grid-row: 3 / 11; }
+  .social__icon-box {
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
+    transition: all .5s; }
+    .social__icon-box--facebook {
+      fill: #1877f2; }
+    .social__icon-box--instagram {
+      fill: #e4405f; }
+    .social__icon-box--linkedin {
+      fill: #0077b5; }
+    .social__icon-box--codepen:hover {
+      background-color: black;
+      fill: white; }
+    .social__icon-box--facebook:hover {
+      background-color: #1877f2;
+      fill: white; }
+    .social__icon-box--github:hover {
+      background-color: black;
+      fill: white; }
+    .social__icon-box--instagram:hover {
+      background-color: #e4405f;
+      fill: white; }
+    .social__icon-box--linkedin:hover {
+      background-color: #0077b5;
+      fill: white; }
+  .social__icon {
+    height: 3rem;
+    width: 3rem; }
+
+.landing {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  justify-items: center;
+  align-items: center; }
+
+.description {
+  display: flex;
+  flex: 0 0 60%;
+  justify-content: space-around;
+  grid-column: 3 / 11;
+  grid-row: 5 / 9; }
+  .description__about {
+    width: 100%;
+    margin-right: 1rem; }
+  .description__dets {
+    width: 100%;
+    margin-left: 1rem;
+    animation: fadeIn 12s; }
+  .description__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem; }
+  .description__para--one {
+    animation: fadeIn 3s; }
+  .description__para--two {
+    animation: fadeIn 6s; }
+  .description__para--three {
+    animation: fadeIn 9s; }
+
+.portfolio-icon {
+  grid-row: 12 / 13;
+  grid-column: 6 / 8; }
+  .portfolio-icon__pic {
+    height: 4rem;
+    width: 4rem;
+    fill: #019c01; }

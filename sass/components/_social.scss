@@ -1,0 +1,69 @@
+//Social elemnet styling
+.social {
+    //Position social element to left and halfway down the screen
+        grid-row: 3 / 11;
+
+    //Styling for icon box
+    &__icon-box {
+        //Create rounded background and shadow effect
+        margin-bottom: 2rem;
+        border-radius: 100%;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        box-shadow: 0 .3rem .3rem rgba(0, 0, 0, 0.6);
+        //Set transition on hover animation
+        transition: all .5s;
+
+        //Styling for individual icon backgrounds
+        //Normal state
+        &--facebook {
+            fill: #1877f2;
+        }
+
+        &--instagram {
+            fill: #e4405f;
+
+        }
+
+        &--linkedin {
+            fill: #0077b5;
+        }
+
+        //Hover state
+        &--codepen:hover {
+            background-color: black;
+            fill: white;
+
+        }
+
+        &--facebook:hover {
+            background-color: #1877f2;
+            fill: white;
+
+        }
+
+        &--github:hover {
+            background-color: black;
+            fill: white;
+
+        }
+
+        &--instagram:hover {
+            background-color: #e4405f;
+            fill: white;
+        }
+
+        &--linkedin:hover {
+            background-color: #0077b5;
+            fill: white;
+        }
+
+    }
+
+
+    //Styling for icon
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+
+    }
+}
