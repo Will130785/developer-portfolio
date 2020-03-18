@@ -1,0 +1,136 @@
+//Project card styling
+.card {
+    //Set overall card width
+    width: 100%;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 1);
+
+    &__img {
+        position: relative;
+
+    //place psuedo element before the image container
+        &::before {
+            //Set content value
+            content: "";
+            //Set position to absolute
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            opacity: 0;
+            transition: all 1s;
+
+    }
+        //Set hover attribute on image container
+        &:hover {
+
+            //Set the opacity on pseudo element upon hover
+            &::before {
+                opacity: 1;
+        }
+    }
+
+    //Styling for tech stack logos
+    &--stack {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 1s;
+
+        &-logo {
+            height: 5rem;
+            width: 5rem;
+            margin: .5rem;
+
+        }
+
+        &:hover {
+           opacity: 1;
+        }
+    }
+        
+
+
+        &--pic {
+            //Set image to fill card
+            width: 100%;
+        }
+    }
+
+
+    &__info {
+        //Set padding for info section
+        padding: 2rem 0;
+
+
+        &--heading {
+            //Title styling
+            font-size: 4rem;
+            text-align: center;
+
+        }
+
+        &--more {
+            //Info button styling
+            display: block;
+            font-size: 1.2rem;
+            margin: 0 auto;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 1rem;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        //Button hover effect
+        &--more:hover {
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+            border: .1rem solid rgb(0, 0, 0);
+        }
+
+    }
+
+    &__links {
+        //Set links section to flex
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        &--box {
+            display: flex;
+            align-items: center;
+
+        }
+
+        &--icon {
+            //Icon styling
+            height: 3rem;
+            width: 3rem;
+
+        }
+
+        &--blurb {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            display: inline-block;
+
+        }
+    }
+
+    //individual card positioning
+    &__one {
+        grid-column: 1 / 2;
+    }
+
+}

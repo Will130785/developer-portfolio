@@ -64,6 +64,80 @@ body {
     width: 2rem;
     margin-top: .5rem; }
 
+.card {
+  width: 100%;
+  box-shadow: 0 0.5rem 0.5rem black; }
+  .card__img {
+    position: relative; }
+    .card__img::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: all 1s; }
+    .card__img:hover::before {
+      opacity: 1; }
+    .card__img--stack {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: all 1s; }
+      .card__img--stack-logo {
+        height: 5rem;
+        width: 5rem;
+        margin: .5rem; }
+      .card__img--stack:hover {
+        opacity: 1; }
+    .card__img--pic {
+      width: 100%; }
+  .card__info {
+    padding: 2rem 0; }
+    .card__info--heading {
+      font-size: 4rem;
+      text-align: center; }
+    .card__info--more {
+      display: block;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 1rem;
+      background-color: black;
+      color: #fff;
+      border-radius: .5rem;
+      cursor: pointer;
+      transition: all .5s; }
+    .card__info--more:hover {
+      background-color: #fff;
+      color: black;
+      border: 0.1rem solid black; }
+  .card__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem; }
+    .card__links--box {
+      display: flex;
+      align-items: center; }
+    .card__links--icon {
+      height: 3rem;
+      width: 3rem; }
+    .card__links--blurb {
+      font-size: 1.4rem;
+      margin-left: 1rem;
+      display: inline-block; }
+  .card__one {
+    grid-column: 1 / 2; }
+
 .social {
   grid-row: 3 / 11;
   animation: iconFadeIn 3s; }
@@ -133,8 +207,41 @@ body {
 .portfolio-icon {
   grid-row: 12 / 13;
   grid-column: 6 / 8;
-  animation: iconFadeIn 3s; }
+  animation: iconFadeIn 3s;
+  cursor: pointer; }
   .portfolio-icon__pic {
     height: 4rem;
     width: 4rem;
     fill: #019c01; }
+
+.portfolio {
+  min-height: 100vh;
+  display: none;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr) repeat(4, min-content); }
+  .portfolio__overview {
+    grid-column: 5 / 8;
+    grid-row: 2 / 4;
+    text-align: center; }
+  .portfolio__heading {
+    font-size: 4rem; }
+  .portfolio__desc {
+    font-size: 1.4rem; }
+  .portfolio__tech {
+    grid-column: 4 / 9;
+    grid-row: 5 / 8;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 5rem);
+    justify-items: center; }
+    .portfolio__tech--logo {
+      height: 3rem;
+      width: 3rem; }
+  .portfolio__projects {
+    grid-column: 2 / 12;
+    grid-row: 9 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(4, min-content);
+    grid-column-gap: 2rem;
+    grid-row-gap: 8rem; }
